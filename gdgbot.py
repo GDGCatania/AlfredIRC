@@ -1,6 +1,6 @@
 ########################## GDG IRC BOT #######################
 # 
-#  Ci sono ancora un bel pò di cose da sistemare 
+#  Ci sono ancora un bel po' di cose da sistemare 
 #	* caricare le configurazioni da file
 #	* dovrebbe essere multithread
 #
@@ -115,12 +115,15 @@ def execute_command(cmd,avaiable_commands):
     	c=avaiable_commands[cmd]
     	print 'output %s' % c[2]
     	print 'subgroupid %s' % c[1]
+    	s="| "
     	if c[2] is not None:
     		send_message(CHAN,'%s' % c[2])
     	for co in avaiable_commands:
     		if avaiable_commands[co][0]==c[1]:
     			print "command groupid %s\n" % avaiable_commands[co][0]
-    			send_message(CHAN,'!%s' %co)
+    			s+="!%s | " %co #send_message(CHAN,'!%s' %co)
+    	if s != '| ':
+    		send_message(CHAN,s)
     	
     		
 
