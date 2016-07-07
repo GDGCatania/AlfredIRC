@@ -1,4 +1,4 @@
-# gdg_irc_bot
+# AlfredIRC
 Simple IRC Bot for #GDGCatania IRC Channel
 
 Use simple socket python libraries to work
