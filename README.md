@@ -9,7 +9,7 @@ Running version is in #GDGCatania IRC Channel in [freenode IRC Network](https://
 
 ### I want to run it myself 
 
-Just clone in and type `python gdgbot.py`
+Just clone in and type `python alfredirc.py`
 
 ### What to do?
 
