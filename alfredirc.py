@@ -56,8 +56,21 @@ def send_pong(msg):
     s.send(bytes('PONG %s\r\n' % msg))
 
 
+def send_notice(user,msg):
+	s.send(bytes('NOTICE %s :%s\r\n' % (user, msg)))
+
 def send_message(chan, msg):
     s.send(bytes('PRIVMSG %s :%s\r\n' % (chan, msg)))
+
+def send_notice(user,msg):
+	s.send(bytes('NOTICE %s %s\r\n' % (user, msg)))
+
+def set_mode(chan,nick,mode):
+	s.send(bytes('MODE %s %s %s\r\n' % (chan,mode,nick)))
+
+
+def send_kick(chan,nick):
+    s.send(bytes('KICK %s %s\r\n' % (chan,nick)))
 
 def send_nick(nick):
     s.send(bytes('NICK %s\r\n' % nick))
@@ -169,6 +182,7 @@ def command_db():
     db=connect()
     res=execute_query(db,'SELECT * FROM GDGIRCBot')
     close_db(db)
+	
     #print res
     return res
 
@@ -180,9 +194,9 @@ def command_db():
 ##### SI DEVONO CARICARE DA FILE
 HOST="irc.freenode.net"
 PORT=6667
-NICK="GDG_Bot"
-IDENT="gdgbot"
-REALNAME="gdgbot"
+NICK="AlfredIRC_debug"
+IDENT="alfredbot_debug"
+REALNAME="alfred_debug"
 CHAN='#GDGCatania'
 readbuffer=""
 
