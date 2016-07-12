@@ -15,7 +15,7 @@ It will create a configuration file and an access file.
 
 ### Example files
   
-  Congiuration
+Congiuration
   Simple json file
   
   `
@@ -33,10 +33,10 @@ It will create a configuration file and an access file.
   }
   `
   
-  Access list
+Access list
   Simple json file with list of users and access mode
-  *'o' channel operator
-  *'v' voice
+  * 'o' channel operator
+  * 'v' voice
   
   `
   [
