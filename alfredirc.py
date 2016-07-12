@@ -13,13 +13,10 @@ import socket
 import string
 import os
 import MySQLdb
+from utils import *
 
 
-## SI DEVONO CARICARE DA FILE
-DBHOST="192.168.56.102"
-DBUSER="root"
-DBPASS="root"
-DBNAME="test"
+
 
 
 
@@ -191,13 +188,27 @@ def command_db():
 
 #####
 
-##### SI DEVONO CARICARE DA FILE
-HOST="irc.freenode.net"
-PORT=6667
-NICK="AlfredIRC_debug"
-IDENT="alfredbot_debug"
-REALNAME="alfred_debug"
-CHAN='#GDGCatania'
+
+CONF_FILE='alfred.conf'
+ACCESS_FILE='access.json'
+
+
+conf=load_from_file(CONF_FILE)
+access=load_from_file(ACCESS_FILE)
+
+## SI DEVONO CARICARE DA FILE
+DBHOST=conf['dbserver']
+DBUSER=conf['dbuser']
+DBPASS=conf['dbpass']
+DBNAME=conf['dbname']
+
+
+HOST=conf['server']
+PORT=int(conf['port'])
+NICK=conf['nick']
+IDENT=conf['ident']
+REALNAME=conf['real']
+CHAN=conf['chan']
 readbuffer=""
 
 

@@ -24,10 +24,10 @@ def main():
 	conf={}
 	access={}
 	
-	print '#######################\n'
-	print '###### AlfredIRC ######\n'
-	print '######   Setup   ######\n'
-	print '#######################\n'
+	print '#######################'
+	print '###### AlfredIRC ######'
+	print '######   Setup   ######'
+	print '#######################'
 	
 	server = raw_input('IRC Server> ')
 	
@@ -51,7 +51,7 @@ def main():
 	
 	chan = raw_input('Channel (omitt #)> ')
 	
-	conf['chan']=chan
+	conf['chan']='#'+chan
 
 	print ' DB Configuration\n'
 
@@ -74,8 +74,6 @@ def main():
 	print ' Config Admin User \n'
 
 	nick = raw_input('Nick of admin user> ')
-	
-	conf['nick']=nick
 
 	access[nick]='o'
 
@@ -83,7 +81,7 @@ def main():
 	
 	save_access(access)
 
-	print 'Now you can start the bot my simply type: ./start_bot.sh\n'
+	print 'Now you can start the bot by simply type: ./start_bot.sh\n'
 
 	
 	
