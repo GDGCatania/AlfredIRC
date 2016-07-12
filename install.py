@@ -9,13 +9,13 @@ CONF_FILE='alfred.conf'
 ACCESS_FILE='access.json'
 
 def save_configuration(configuration):
-	with open(CONF_FILE) as f:
-		f.write(json.dump(configuration,indent=4))
+	with open(CONF_FILE,'w') as f:
+		f.write(json.dumps(configuration,indent=4))
 	print '[  OK  ] Configuration saved on: %s\n' % CONF_FILE
 
 def save_access(access):
-	with open(ACCESS_FILE) as f:
-		f.write(json.dump(access,indent=4))
+	with open(ACCESS_FILE,'w') as f:
+		f.write(json.dumps(access,indent=4))
 	print '[  OK  ] Access saved on: %s\n' % ACCESS_FILE
 
 
@@ -71,7 +71,7 @@ def main():
 	
 	conf['dbname']=dbname
 	
-	print ' Config Admin User
+	print ' Config Admin User \n'
 
 	nick = raw_input('Nick of admin user> ')
 	
@@ -79,7 +79,7 @@ def main():
 
 	access[nick]='o'
 
-	save_configutation(conf)
+	save_configuration(conf)
 	
 	save_access(access)
 
