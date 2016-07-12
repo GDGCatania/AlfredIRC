@@ -21,7 +21,7 @@ Then you need to edit `alfred.conf` with your login data for mysql server and ir
 
 Edit `access.json` for give your irc user the permission to send command to the bot
 
-To run del bot you can do in two way:
+To run the bot you can do in two way:
 
 * Running `python alfredirc.py` will run the bot in foregroud
 * Running `start_bot.sh` will run the bot in backgroud
