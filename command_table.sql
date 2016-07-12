@@ -1,0 +1,10 @@
+CREATE TABLE IF NOT EXISTS commands (
+CommandName varchar(50) NOT NULL,
+GroupID tinyint(4) NOT NULL,
+SubGroupID tinyint(4) DEFAULT NULL,
+Output varchar(5000) DEFAULT NULL,
+ID bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+PRIMARY KEY (ID),
+UNIQUE KEY ID (ID),
+UNIQUE KEY CommandName (CommandName)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=22 ;
