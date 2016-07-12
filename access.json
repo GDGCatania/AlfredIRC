@@ -1,0 +1,10 @@
+[
+	{
+		"nick":"operator",
+		"level":"o"
+	},
+	{
+		"nick":"user_voice",
+		"level":"v"
+	}
+]
